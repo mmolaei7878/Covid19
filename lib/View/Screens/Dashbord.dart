@@ -1,5 +1,4 @@
 import 'package:covid19/Controller/DashboardController.dart';
-import 'package:covid19/View/Screens/Countries.dart';
 import 'package:covid19/View/Screens/HomeScreen.dart';
 import 'package:covid19/View/Screens/MyCountry.dart';
 import 'package:flutter/cupertino.dart';
@@ -17,7 +16,6 @@ class DashBoard extends StatelessWidget {
               index: controller.currentIndex,
               children: [
                 HomeScreen(),
-                Countries(),
                 MyCountry(),
               ],
             ),
@@ -39,11 +37,7 @@ class DashBoard extends StatelessWidget {
                 label: 'Home',
               ),
               _bottomNavigationBarItem(
-                icon: CupertinoIcons.list_bullet,
-                label: 'Countries',
-              ),
-              _bottomNavigationBarItem(
-                icon: CupertinoIcons.person,
+                icon: CupertinoIcons.flag,
                 label: 'My Country',
               ),
             ],

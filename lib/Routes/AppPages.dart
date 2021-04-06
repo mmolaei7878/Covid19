@@ -1,5 +1,4 @@
 import 'package:covid19/Binding/DashboardBinding.dart';
-import 'package:covid19/View/Screens/Countries.dart';
 import 'package:covid19/View/Screens/Dashbord.dart';
 import 'package:covid19/View/Screens/HomeScreen.dart';
 import 'package:covid19/View/Screens/MyCountry.dart';
@@ -17,10 +16,6 @@ class AppPages {
     GetPage(
       name: AppRoutes.HOME,
       page: () => HomeScreen(),
-    ),
-    GetPage(
-      name: AppRoutes.COUNTRIES,
-      page: () => Countries(),
     ),
     GetPage(
       name: AppRoutes.MYCOUNTRY,
