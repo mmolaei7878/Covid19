@@ -1,80 +1,62 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class CardHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final deviceSize = MediaQuery.of(context).size;
-
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
-      width: deviceSize.width,
-      height: deviceSize.height * 0.35,
       child: Stack(
-        alignment: Alignment.center,
+        clipBehavior: Clip.none,
         children: [
-          Positioned(
-            child: Container(
-              width: deviceSize.width,
-              height: deviceSize.height * 0.25,
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                color: Color(0xff0A93F1),
-                elevation: 10,
+          Positioned.fill(
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
               ),
+              color: Color(0xff0A93F1),
+              elevation: 10,
             ),
           ),
-          Positioned(
-            left: 0,
-            top: 0,
+          Positioned.fill(
+            top: -10.0.h,
             child: Container(
+              margin: EdgeInsets.only(bottom: 4),
               child: Image.asset(
                 'lib/Asset/images/nurse2.png',
-                width: 280,
-                height: 320,
                 fit: BoxFit.contain,
+                alignment: Alignment.topLeft,
               ),
             ),
           ),
           Positioned(
             right: 0,
-            width: deviceSize.width * 0.40,
-            height: deviceSize.height * 0.25,
-            child: Container(
-              margin: EdgeInsets.all(30),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        'Covid 19',
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText1
-                            .copyWith(fontSize: 25),
-                      ),
-                    ),
+            height: 27.0.h,
+            width: 38.0.w,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Flexible(
+                  flex: 1,
+                  child: Text(
+                    'Covid 19',
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyText1
+                        .copyWith(fontSize: 17.0.sp),
                   ),
-                  Expanded(
-                    flex: 2,
-                    child: Container(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        'protect your self and your family from covid 19',
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText1
-                            .copyWith(color: Colors.white60, fontSize: 21),
-                      ),
-                    ),
+                ),
+                Flexible(
+                  flex: 1,
+                  child: Text(
+                    'protect your self and your family from covid 19',
+                    style: Theme.of(context).textTheme.bodyText1.copyWith(
+                          color: Colors.white60,
+                          fontSize: 14.0.sp,
+                        ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ],

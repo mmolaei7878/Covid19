@@ -12,13 +12,12 @@ class MyPieChart extends GetView<MyCountryController> {
       chartLegendSpacing: 32,
       chartRadius: MediaQuery.of(context).size.width - 150,
       colorList: [
-        Colors.red,
+        Colors.amber,
         Colors.black,
         Colors.blue,
       ],
-      initialAngleInDegree: 0,
       chartType: ChartType.disc,
-      centerText: 'covid',
+      centerText: controller.countryname,
       legendOptions: LegendOptions(
         showLegendsInRow: true,
         legendPosition: LegendPosition.bottom,
@@ -33,7 +32,8 @@ class MyPieChart extends GetView<MyCountryController> {
         showChartValueBackground: true,
         showChartValues: true,
         showChartValuesInPercentage: true,
-        showChartValuesOutside: false,
+        showChartValuesOutside: true,
+        chartValueBackgroundColor: Theme.of(context).primaryColor,
         decimalPlaces: 2,
       ),
     );

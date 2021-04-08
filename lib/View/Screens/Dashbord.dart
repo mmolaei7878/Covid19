@@ -4,6 +4,7 @@ import 'package:covid19/View/Screens/MyCountry.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sizer/sizer.dart';
 
 class DashBoard extends StatelessWidget {
   @override
@@ -21,7 +22,7 @@ class DashBoard extends StatelessWidget {
             ),
           ),
           bottomNavigationBar: BottomNavigationBar(
-            iconSize: 36,
+            iconSize: 2.5.h,
             unselectedItemColor: Colors.black,
             selectedItemColor: Colors.white,
             onTap: controller.changeIndex,
