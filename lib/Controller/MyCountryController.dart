@@ -10,9 +10,9 @@ class MyCountryController extends GetxController {
   String countryname;
   final repository = MyCountryRepository();
   var dataMap = {
-    "Today Cases": 0.0,
-    "Today Deaths": 0.0,
-    "Today Recovered": 0.0,
+    "TodayCases": 0.0,
+    "TodayDeaths": 0.0,
+    "TodayRecovered": 0.0,
   };
 
   getMyCountryss(String cn) async {
@@ -21,9 +21,9 @@ class MyCountryController extends GetxController {
       imageUrl = country.flag['flag'];
       countryname = country.countryname;
       dataMap = {
-        "Today Cases": country.todayCases.toDouble(),
-        "Today Deaths": country.todayDeaths.toDouble(),
-        "Today Recovered": country.todayRecovered.toDouble(),
+        "TodayCases": country.todayCases.toDouble(),
+        "TodayDeaths": country.todayDeaths.toDouble(),
+        "TodayRecovered": country.todayRecovered.toDouble(),
       };
     } catch (e) {
       Get.showSnackbar(GetBar(

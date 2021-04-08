@@ -2,7 +2,7 @@ import 'package:covid19/Model/AllCasesModel.dart';
 import 'package:dio/dio.dart';
 
 class AllCasesRepository {
-  Future<AllCasesModel> getAllCases() async {
+  Future getAllCases() async {
     try {
       final response =
           await Dio().get('https://corona.lmao.ninja/v2/all?yesterday');
