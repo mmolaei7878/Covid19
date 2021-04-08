@@ -29,9 +29,9 @@ class CardHomeScreen extends StatelessWidget {
             ),
           ),
           Positioned(
-            right: 0,
+            right: 5,
             height: 27.0.h,
-            width: 38.0.w,
+            width: 34.0.w,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -52,7 +52,7 @@ class CardHomeScreen extends StatelessWidget {
                     'protect your self and your family from covid 19',
                     style: Theme.of(context).textTheme.bodyText1.copyWith(
                           color: Colors.white60,
-                          fontSize: 14.0.sp,
+                          fontSize: 13.0.sp,
                         ),
                   ),
                 ),

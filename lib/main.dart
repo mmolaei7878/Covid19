@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       return OrientationBuilder(builder: (context, orientation) {
         SizerUtil().init(constraints, orientation);
         return GetMaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(
             primaryColor: Color(0xff0A93F1),
